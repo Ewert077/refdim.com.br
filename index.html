@@ -64,6 +64,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
+        <div class="hero-bg-image"></div>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="row">
@@ -90,52 +91,67 @@
             </div>
         </div>
         <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
-            <a href="#about">
-                <i class="fas fa-chevron-down"></i>
+            <a href="#about" class="scroll-link" aria-label="Rolar para a seção Sobre">
+                <span class="scroll-text">Veja mais</span>
+                <span class="scroll-circle">
+                    <i class="fas fa-chevron-down"></i>
+                </span>
             </a>
         </div>
     </section>
 
+    <!-- Awareness / Symptoms Section -->
+  
     <!-- About Section -->
     <section id="about" class="about-section py-5">
+        <div class="section-dot-pattern"></div>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
                     <div class="about-image-wrapper">
-                        <img src="imagens/1.jpg" 
-                             alt="Sobre Refdim" 
-                             class="img-fluid rounded-3 shadow-lg">
+                        <div class="about-image-frame"></div>
+                        <img src="imagens/empresa.jpg"
+                             alt="Cristiane - Fundadora da Refdim"
+                             class="about-main-image">
+                        <div class="about-signature">
+                            <span class="signature-name">Cristiane</span>
+                            <span class="signature-role">Fundadora &amp; Mentora</span>
+                        </div>
                         <div class="about-badge">
                             <i class="fas fa-award"></i>
-                            <span>+5 Anos de Experiência</span>
+                            <div class="about-badge-text">
+                                <strong>+5</strong>
+                                <span>Anos de Experiência</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-7" data-aos="fade-left">
                     <div class="section-label mb-3">Sobre Nós</div>
                     <h2 class="section-title mb-4">
-                        Desenvolvimento Humano com Propósito e Excelência
+                        Desenvolvimento Humano com <em>Propósito</em> e Excelência
                     </h2>
                     <p class="section-text mb-4">
-                        Na <strong>Refdim</strong>, acreditamos que o verdadeiro desenvolvimento humano acontece quando integramos 
-                        mente, emoções e propósito. Nossa abordagem única combina psicanálise profunda, consciência financeira 
+                        Na <strong>Refdim</strong>, acreditamos que o verdadeiro desenvolvimento humano acontece quando integramos
+                        mente, emoções e propósito. Nossa abordagem única combina psicanálise profunda, consciência financeira
                         e técnicas de hipnose para promover transformações duradouras.
                     </p>
                     <p class="section-text mb-4">
-                        Com mais de uma década de experiência, nossa missão é guiar indivíduos em sua jornada de autoconhecimento 
+                        Com mais de uma década de experiência, nossa missão é guiar indivíduos em sua jornada de autoconhecimento
                         e realização pessoal, oferecendo mentorias personalizadas que respeitam a singularidade de cada pessoa.
                     </p>
+                    <div class="about-divider"></div>
                     <div class="about-features">
                         <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-                            <i class="fas fa-check-circle"></i>
+                            <div class="feature-icon"><i class="fas fa-check"></i></div>
                             <span>Abordagem Integrada e Personalizada</span>
                         </div>
                         <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fas fa-check-circle"></i>
+                            <div class="feature-icon"><i class="fas fa-check"></i></div>
                             <span>Profissionais Certificados e Experientes</span>
                         </div>
                         <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-                            <i class="fas fa-check-circle"></i>
+                            <div class="feature-icon"><i class="fas fa-check"></i></div>
                             <span>Resultados Comprovados e Duradouros</span>
                         </div>
                     </div>
@@ -146,6 +162,11 @@
 
     <!-- Services Section -->
     <section id="services" class="services-section py-5">
+        <div class="section-dot-pattern"></div>
+        <div class="services-glow services-glow-1"></div>
+        <div class="services-glow services-glow-2"></div>
+        <div class="light-point"></div>
+        <div class="light-point-2"></div>
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                 <div class="section-label mb-3">Nossos Serviços</div>
@@ -153,14 +174,14 @@
                     Caminhos para Sua Transformação
                 </h2>
                 <p class="section-text mx-auto" style="max-width: 700px;">
-                    Oferecemos três pilares fundamentais para o seu desenvolvimento integral, 
+                    Oferecemos quatro pilares fundamentais para o seu desenvolvimento integral,
                     cada um projetado para atender suas necessidades específicas.
                 </p>
             </div>
 
             <div class="row g-4">
                 <!-- Service 1: Psicanálise -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card h-100">
                         <div class="service-icon">
                             <i class="fas fa-brain"></i>
@@ -184,7 +205,7 @@
                 </div>
 
                 <!-- Service 2: Consciência Financeira -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card h-100 featured">
                         <div class="featured-badge">Mais Procurado</div>
                         <div class="service-icon">
@@ -209,15 +230,15 @@
                 </div>
 
                 <!-- Service 3: Hipnose -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card h-100">
                         <div class="service-icon">
                             <i class="fas fa-spa"></i>
                         </div>
                         <h3 class="service-title">Hipnose</h3>
                         <p class="service-description">
-                            Acesse o poder transformador do seu subconsciente através de técnicas de hipnose 
-                            clínica. Supere vícios, medos e ansiedades, reprogramando padrões mentais para 
+                            Acesse o poder transformador do seu subconsciente através de técnicas de hipnose
+                            clínica. Supere vícios, medos e ansiedades, reprogramando padrões mentais para
                             alcançar seus objetivos.
                         </p>
                         <ul class="service-benefits">
@@ -231,9 +252,104 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Service 4: Mentoria para Mulheres -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-venus"></i>
+                        </div>
+                        <h3 class="service-title">Mentoria para Mulheres</h3>
+                        <p class="service-description">
+                            Um espaço dedicado ao fortalecimento feminino, unindo autoconhecimento, autoestima
+                            e estratégia para equilibrar carreira, família e propósito sem abrir mão de si mesma.
+                        </p>
+                        <ul class="service-benefits">
+                            <li><i class="fas fa-star"></i> Autoestima e empoderamento feminino</li>
+                            <li><i class="fas fa-star"></i> Equilíbrio entre carreira e vida pessoal</li>
+                            <li><i class="fas fa-star"></i> Independência financeira e emocional</li>
+                            <li><i class="fas fa-star"></i> Rede de apoio entre mulheres</li>
+                        </ul>
+                        <a href="https://wa.me/5511949615704?text=Oi%20Cristiane%2C%20te%20encontrei%20atrav%C3%A9s%20do%20site%20e%20tenho%20interesse%20nos%20seus%20servi%C3%A7os" class="btn btn-service">
+                            Saiba Mais <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+      <section id="awareness" class="awareness-section py-5">
+        <div class="section-dot-pattern"></div>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="brain-visual">
+                        <div class="brain-ring"></div>
+                        <div class="brain-glow"></div>
+                        <div class="brain-particles">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <img src="imagens/cerebro.png" alt="Ilustração de um cérebro representando sobrecarga mental" class="brain-image">
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="section-label mb-3">Sinais de Alerta</div>
+                    <h2 class="awareness-title">
+                        Não é normal e <span class="text-accent">não é saudável</span>
+                    </h2>
+                    <div class="symptom-list-wrapper">
+                        <div class="symptom-line"></div>
+                        <ul class="symptom-list">
+                            <li data-aos="fade-up" data-aos-delay="50">
+                                <span class="symptom-pearl"></span>
+                                <span>Estar ansioso o tempo todo</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="100">
+                                <span class="symptom-pearl"></span>
+                                <span>Estar irritado o tempo todo</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="150">
+                                <span class="symptom-pearl"></span>
+                                <span>Se preocupar com a opinião alheia o tempo todo</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="200">
+                                <span class="symptom-pearl"></span>
+                                <span>Estar triste o tempo todo</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="250">
+                                <span class="symptom-pearl"></span>
+                                <span>Sensação de cansaço o tempo todo</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <span class="symptom-pearl"></span>
+                                <span>Estar em luta o tempo todo</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="350">
+                                <span class="symptom-pearl"></span>
+                                <span>Querer agradar a todos o tempo todo</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="400">
+                                <span class="symptom-pearl"></span>
+                                <span>Se cobrar demais</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="awareness-text" data-aos="fade-up" data-aos-delay="450">
+                        Esses sintomas não são você — são apenas um estado que você pode aprender a controlar e equilibrar.
+                    </p>
+                    <p class="awareness-text awareness-text-strong" data-aos="fade-up" data-aos-delay="500">
+                        Não acumule suas dificuldades e tensões do dia a dia, cuide da sua saúde mental.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials-section py-5">
@@ -489,20 +605,30 @@
                     
                  
                     
-                    <div class="cta-stats mt-5" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Vidas Transformadas</div>
+                    <div class="cta-topics mt-5">
+                        <div class="cta-topic" data-aos="fade-up" data-aos-delay="100">
+                            <div class="cta-topic-icon"><i class="fas fa-user-shield"></i></div>
+                            <span>Sigilo e Confidencialidade</span>
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">98%</div>
-                            <div class="stat-label">Satisfação</div>
+                        <div class="cta-topic" data-aos="fade-up" data-aos-delay="150">
+                            <div class="cta-topic-icon"><i class="fas fa-laptop"></i></div>
+                            <span>Atendimento Online ou Presencial</span>
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Anos de Experiência</div>
+                        <div class="cta-topic" data-aos="fade-up" data-aos-delay="200">
+                            <div class="cta-topic-icon"><i class="fas fa-fingerprint"></i></div>
+                            <span>Metodologia Personalizada</span>
+                        </div>
+                        <div class="cta-topic" data-aos="fade-up" data-aos-delay="250">
+                            <div class="cta-topic-icon"><i class="fas fa-certificate"></i></div>
+                            <span>Profissionais Certificados</span>
+                        </div>
+                        <div class="cta-topic" data-aos="fade-up" data-aos-delay="300">
+                            <div class="cta-topic-icon"><i class="fas fa-clock"></i></div>
+                            <span>Flexibilidade de Horários</span>
+                        </div>
+                        <div class="cta-topic" data-aos="fade-up" data-aos-delay="350">
+                            <div class="cta-topic-icon"><i class="fas fa-chart-line"></i></div>
+                            <span>Resultados Comprovados</span>
                         </div>
                     </div>
                 </div>
@@ -510,8 +636,95 @@
         </div>
     </section>
 
+    <!-- Orbit / About Highlight Section -->
+    <section id="community" class="orbit-section">
+        <div class="orbit-ring"></div>
+
+        <div class="arc-gallery" data-aos="fade-up">
+            <div class="arc-photo arc-photo-1">
+                <img src="imagens/clientes/1.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-2">
+                <img src="imagens/clientes/2.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-3">
+                <img src="imagens/clientes/3.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-4">
+                <img src="imagens/clientes/4.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-5">
+                <img src="imagens/clientes/5.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-6">
+                <img src="imagens/clientes/6.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-7">
+                <img src="imagens/clientes/7.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-8">
+                <img src="imagens/clientes/8.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-9">
+                <img src="imagens/clientes/9.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="arc-photo arc-photo-10">
+                <img src="imagens/clientes/10.jpg" alt="" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="orbit-content text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="orbit-badge">
+                    <i class="fas fa-leaf"></i>
+                    <span>Sobre a Refdim</span>
+                </div>
+                <h2 class="orbit-title">
+                    Ajudando pessoas a encontrarem<br>
+                    equilíbrio, clareza e confiança
+                </h2>
+                <p class="orbit-text">
+                    Acreditamos que um cuidado genuíno começa com escuta. Nosso objetivo é ajudar
+                    você a prosperar apesar do estresse, das inseguranças e das mudanças da vida.
+                </p>
+                <a href="#about" class="btn-orbit">
+                    <span>Saiba Mais Sobre Nós</span>
+                    <i class="fas fa-angles-right"></i>
+                </a>
+            </div>
+
+            <div class="orbit-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="orbit-stat-item">
+                    <div class="orbit-stat-number" data-counter="5" data-prefix="+">0</div>
+                    <div class="orbit-stat-label">Anos de Experiência</div>
+                </div>
+                <div class="orbit-stat-divider"></div>
+                <div class="orbit-stat-item">
+                    <div class="orbit-stat-number" data-counter="4">0</div>
+                    <div class="orbit-stat-label">Especialidades</div>
+                </div>
+                <div class="orbit-stat-divider"></div>
+                <div class="orbit-stat-item">
+                    <div class="orbit-stat-number" data-counter="98" data-suffix="%">0</div>
+                    <div class="orbit-stat-label">Satisfação</div>
+                </div>
+                <div class="orbit-stat-divider"></div>
+                <div class="orbit-stat-item">
+                    <div class="orbit-stat-number">1:1</div>
+                    <div class="orbit-stat-label">Atendimento Personalizado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer py-5">
+        <div class="footer-background">
+            <div class="tech-grid"></div>
+            <div class="floating-particles"></div>
+            <div class="tech-circle footer-circle-1"></div>
+            <div class="tech-circle footer-circle-2"></div>
+        </div>
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">

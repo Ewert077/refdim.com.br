@@ -200,16 +200,18 @@ if ("IntersectionObserver" in window) {
 // Counter Animation for Statistics
 // ===================================
 function animateCounter(element, target, duration = 2000) {
+  const prefix = element.dataset.prefix || ""
+  const suffix = element.dataset.suffix || ""
   let start = 0
   const increment = target / (duration / 16)
 
   const timer = setInterval(() => {
     start += increment
     if (start >= target) {
-      element.textContent = target
+      element.textContent = prefix + target + suffix
       clearInterval(timer)
     } else {
-      element.textContent = Math.floor(start)
+      element.textContent = prefix + Math.floor(start) + suffix
     }
   }, 16)
 }
@@ -235,6 +237,77 @@ if (counterElements.length > 0) {
 // ===================================
 window.addEventListener("load", () => {
   document.body.classList.add("loaded")
+})
+
+// ===================================
+// Orbit Gallery (photos travel continuously along the arc,
+// like cars riding a slow-turning wheel)
+// ===================================
+document.addEventListener("DOMContentLoaded", () => {
+  const gallery = document.querySelector(".arc-gallery")
+  const cards = document.querySelectorAll(".arc-photo")
+  if (!gallery || !cards.length) return
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  if (prefersReducedMotion || window.innerWidth < 769) return
+
+  const RADIUS = 1400 // px — large radius keeps the arc shallow
+  const SPEED = 2.4 // degrees per second
+  const MIN_ANGLE = -25
+  const MAX_ANGLE = 25
+
+  // How many cards sit evenly across the visible window at any instant — this
+  // is a fixed design choice (matches the fan look), independent of how many
+  // photos are in the pool. Spacing is derived from THIS, not from
+  // cards.length, so adding more photos just means more variety cycling
+  // through the same 5 slots instead of cramming everything on screen at once.
+  const VISIBLE_SLOTS = 5
+  const spacing = (MAX_ANGLE - MIN_ANGLE) / (VISIBLE_SLOTS - 1)
+  const travelRange = spacing * cards.length
+  const buffer = (travelRange - (MAX_ANGLE - MIN_ANGLE)) / 2
+  const travelMin = MIN_ANGLE - buffer
+  const travelMax = MAX_ANGLE + buffer
+  const FADE_ZONE = Math.min(buffer, 10) // fade completes within the buffer (or sooner)
+
+  const riders = Array.from(cards).map((el, i) => {
+    el.style.display = "block"
+    el.style.left = "50%"
+    el.style.top = "0"
+    return { el, angle: travelMin + i * spacing }
+  })
+
+  let lastTs = null
+
+  function frame(ts) {
+    if (lastTs !== null) {
+      const dt = (ts - lastTs) / 1000
+      for (const rider of riders) {
+        rider.angle += SPEED * dt
+        if (rider.angle > travelMax) {
+          rider.angle -= travelRange
+        }
+
+        const rad = (rider.angle * Math.PI) / 180
+        const x = Math.sin(rad) * RADIUS
+        const y = RADIUS - Math.cos(rad) * RADIUS
+
+        let opacity = 1
+        if (rider.angle < MIN_ANGLE) {
+          opacity = 1 - Math.min(1, (MIN_ANGLE - rider.angle) / FADE_ZONE)
+        } else if (rider.angle > MAX_ANGLE) {
+          opacity = 1 - Math.min(1, (rider.angle - MAX_ANGLE) / FADE_ZONE)
+        }
+
+        rider.el.style.transform = `translate(-50%, 0) translate(${x.toFixed(2)}px, ${y.toFixed(2)}px) rotate(${rider.angle.toFixed(2)}deg)`
+        rider.el.style.opacity = String(Math.max(0, opacity))
+        rider.el.style.zIndex = String(1000 - Math.round(Math.abs(rider.angle) * 10))
+      }
+    }
+    lastTs = ts
+    requestAnimationFrame(frame)
+  }
+
+  requestAnimationFrame(frame)
 })
 
 // ===================================
