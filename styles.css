@@ -26,6 +26,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 97px;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-dark);
@@ -77,6 +81,12 @@ img {
   letter-spacing: 1px;
 }
 
+.navbar-brand img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
 .navbar-nav .nav-link {
   color: #111 !important;
   font-weight: 500;
@@ -126,16 +136,19 @@ img {
    =================================== */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  height: 127vh;
   /* Added animated gradient background */
   background: linear-gradient(135deg, #010d00 0%, #102601 25%, #1a3a1a 50%, #102601 75%, #010d00 100%);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 97px;
+  padding-bottom: 2rem;
 }
 
 /* Added gradient animation keyframes */
@@ -321,12 +334,9 @@ img {
 }
 
 .scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   z-index: 10;
-  /* Increased z-index */
+  flex-shrink: 0;
 }
 
 .scroll-link {
