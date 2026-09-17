@@ -2378,3 +2378,215 @@ img {
     display: none;
   }
 }
+
+/* ===================================
+   DEMI Methodology Section
+   =================================== */
+.demi-section {
+  position: relative;
+  padding: 7rem 0;
+  background: linear-gradient(160deg, #010d00 0%, #102601 55%, #1a3a1a 100%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.demi-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: 0;
+  pointer-events: none;
+  animation: float 24s ease-in-out infinite;
+}
+
+.demi-glow-1 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(117, 140, 101, 0.35), transparent 70%);
+  top: -160px;
+  left: -140px;
+}
+
+.demi-glow-2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(219, 242, 196, 0.18), transparent 70%);
+  bottom: -140px;
+  right: -120px;
+  animation-delay: 8s;
+}
+
+.demi-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.demi-label {
+  color: var(--color-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.demi-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.demi-title-accent {
+  color: var(--color-light);
+  font-style: italic;
+}
+
+.demi-subtitle {
+  color: rgba(219, 242, 196, 0.8);
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 2.5rem;
+}
+
+.demi-intro {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  max-width: 700px;
+  margin: 0 auto 1.25rem;
+}
+
+.demi-lead-in {
+  color: var(--color-light);
+  font-weight: 600;
+  margin: 2rem auto 0;
+  max-width: 600px;
+}
+
+.demi-steps {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 4rem 0 5rem;
+}
+
+.demi-steps::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 9%;
+  right: 9%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(219, 242, 196, 0.35), rgba(219, 242, 196, 0.35), transparent);
+  z-index: 0;
+}
+
+.demi-step {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.demi-step-letter {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: radial-gradient(circle at 35% 30%, #ffffff, var(--color-light) 55%, var(--color-accent) 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 6px rgba(219, 242, 196, 0.08);
+  transition: var(--transition);
+}
+
+.demi-step:hover .demi-step-letter {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 0 8px rgba(219, 242, 196, 0.14);
+}
+
+.demi-step-title {
+  color: var(--color-white);
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.demi-step-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.demi-quote {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.demi-quote-icon {
+  color: var(--color-accent);
+  font-size: 1.8rem;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.demi-quote p {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  line-height: 1.6;
+  color: var(--color-light);
+}
+
+@media (max-width: 768px) {
+  .demi-steps {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 3rem 0 3.5rem;
+  }
+
+  .demi-steps::before {
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, transparent, rgba(219, 242, 196, 0.35), rgba(219, 242, 196, 0.35), transparent);
+  }
+
+  .demi-step {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: left;
+    padding: 0;
+  }
+
+  .demi-step-letter {
+    margin: 0;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    font-size: 1.7rem;
+  }
+
+  .demi-step-text {
+    max-width: none;
+    margin: 0;
+  }
+}
